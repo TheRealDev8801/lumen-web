@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lumen — Analytics that feel effortless</title>
+<meta name="description" content="Lumen turns raw product data into clear, actionable insight. Real-time dashboards, beautiful charts, and reporting your whole team will actually love using." />
+<meta property="og:title" content="Lumen — Analytics that feel effortless" />
+<meta property="og:description" content="Real-time dashboards and reporting your whole team will love." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#070a12" />
+<style>
+  /* ============ Tokens ============ */
+  :root {
+    --bg: #070a12;
+    --bg-soft: #0b1020;
+    --panel: rgba(255, 255, 255, 0.035);
+    --panel-2: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.16);
+    --text: #e7eaf2;
+    --muted: #98a2bd;
+    --muted-2: #6b7490;
+    --accent: #6d6dfc;
+    --accent-2: #22d3ee;
+    --accent-3: #b96dfc;
+    --grad: linear-gradient(120deg, #6d6dfc 0%, #22d3ee 55%, #b96dfc 100%);
+    --radius: 16px;
+    --radius-sm: 12px;
+    --maxw: 1200px;
+    --shadow-lg: 0 30px 80px -30px rgba(109, 109, 252, 0.45);
+    --ease: cubic-bezier(.22,.61,.36,1);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Ambient background */
+  .bg-fx {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(1200px 600px at 80% -10%, rgba(109,109,252,.18), transparent 60%),
+                radial-gradient(900px 500px at 10% 110%, rgba(34,211,238,.12), transparent 60%);
+  }
+  .bg-fx::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(700px 500px at 50% 0%, #000 0%, transparent 75%);
+    -webkit-mask-image: radial-gradient(700px 500px at 50% 0%, #000 0%, transparent 75%);
+    opacity: .5;
+  }
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: .55;
+    animation: float 14s var(--ease) infinite;
+  }
+  .blob.b1 { width: 520px; height: 520px; background: #4b4bd6; top: -120px; left: -80px; }
+  .blob.b2 { width: 420px; height: 420px; background: #16a7c0; top: 120px; right: -120px; animation-delay: -4s; }
+  .blob.b3 { width: 380px; height: 380px; background: #7a3bd6; bottom: -140px; left: 40%; animation-delay: -8s; }
+  @keyframes float {
+    0%,100% { transform: translate3d(0,0,0) scale(1); }
+    50%
